@@ -48,6 +48,7 @@ const viewOrders = [
 const App = () => {
   const [coinData, setCoinData] = useState([]);
   const [order, setOrder] = useState('market_cap_desc')
+  const orderName = viewOrders.filter( item => item.value === order)[0].name;
 
   useEffect(() => {
     axios
@@ -62,11 +63,7 @@ const App = () => {
       <Navbar setOrder={setOrder} viewOrders={viewOrders}/>
       <h2 
         className='view-title'>
-        Current view: {viewOrders.forEach( item => {
-          if (item.value === order) {
-          return item.name;
-          }
-        })}
+        Current view: {orderName}
       </h2>
       <Charts coinData={coinData} />
     </div>
