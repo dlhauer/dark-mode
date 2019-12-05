@@ -10,6 +10,8 @@
     "node-sass": "^4.13.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
+    "react-fontawesome": "^1.7.1",
+    "react-onclickoutside": "^6.9.0",
     "react-scripts": "3.0.1",
     "recharts": "1.6.2"
   },
